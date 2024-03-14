@@ -59,3 +59,4 @@ class TrafficSchedules:
                         stop_time.split(':')[1]) >= current_time_min or int(
                     stop_time.split(':')[0]) > current_time_hour:
                     return item
+
