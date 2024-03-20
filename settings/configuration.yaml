@@ -1,0 +1,18 @@
+registry:
+  # Plugin registry settings example
+  url: 'https://github.com/{name}/{repository}/releases/download/{tag}'
+  name: ''
+  repository: ''
+  tag: 'latest'
+logging:
+  # Setting the log level: CRITICAL, ERROR, WARNING, INFO, DEBUG
+  level: 'DEBUG'
+plugins:
+  # Packages to download from registry
+  - plugin_1
+  - plugin_2
+  - plugin_3
+  - plugin_4
+line-bot-info:
+  LINE_BOT_CHANNEL_ACCESS_TOKEN : "5IYg1b2hFkaiFo93D0nt9N+xwyWVtM5d+4er6HKqMSmBEo9FeMS+V8B8e2Ur2ZdLsS1pjL/lb8Ip9I5ABnMGD5AlraJfbTXfLnaCar3haGV2T7k+VBPqo7b1r7MfJuouJ99RX+nqbFvSY2bvIWTuFQdB04t89/1O/w1cDnyilFU="
+  LINE_BOT_CHANNEL_SECRET : "b96701b5a4af4c9de6a19cbf3f59bcd5"

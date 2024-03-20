@@ -1,0 +1,5 @@
+name: 'plugin_3'
+creator: 'wax911'
+runtime:
+  main: 'init'
+description: 'Advanced sample-plugin plugin template'
