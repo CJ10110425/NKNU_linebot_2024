@@ -37,6 +37,14 @@ class FileSystem:
         with open(os.path.join(config_directory, name)) as file:
             input_data = yaml.safe_load(file)
         return input_data
+    
+    @staticmethod
+    def load_line_bot_info(name: str = 'app_info.yaml',config_directory: Optional[str] = None) -> dict:
+        if config_directory is None:
+            config_directory = FileSystem.__get_config_directory()
+        with open(os.path.join(config_directory, name)) as file:
+            input_data = yaml.safe_load(file)
+        return input_data
 
 
 if __name__ == "__main__":
