@@ -1,0 +1,206 @@
+[
+    {   
+        "id": "home_view_menu",
+        "size": {"width": 2500, "height": 1686},
+        "selected": false,
+        "name": "home_view",
+        "chatBarText": "咻！",
+        "areas": [
+            {
+                "bounds": {"x": 0, "y": 0, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 1"}
+            },
+            {
+                "bounds": {"x": 833, "y": 0, "width": 834, "height": 843},
+                "action": {"type": "message", "text": "Action 2"}
+            },
+            {
+                "bounds": {"x": 1667, "y": 0, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 3"}
+            },
+            {
+                "bounds": {"x": 0, "y": 843, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 4"}
+            },
+            {
+                "bounds": {"x": 833, "y": 843, "width": 834, "height": 843},
+                "action": {"type": "message", "text": "Action 5"}
+            },
+            {
+                "bounds": {"x": 1667, "y": 843, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 6"}
+            }
+        ]
+        
+    },
+    {   
+        "id": "feature_1_menu",
+        "size": {"width":2500, "height": 1686},
+        "selected": false,
+        "name": "feature_1_menu",
+        "chatBarText": "校/公車時刻表",
+        "areas": [
+            {
+                "bounds": {"x": 0, "y": 0, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 1"}
+            },
+            {
+                "bounds": {"x": 833, "y": 0, "width": 834, "height": 843},
+                "action": {"type": "message", "text": "Action 2"}
+            },
+            {
+                "bounds": {"x": 1667, "y": 0, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 3"}
+            },
+            {
+                "bounds": {"x": 0, "y": 843, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 4"}
+            },
+            {
+                "bounds": {"x": 833, "y": 843, "width": 834, "height": 843},
+                "action": {"type": "message", "text": "Action 5"}
+            },
+            {
+                "bounds": {"x": 1667, "y": 843, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 6"}
+            }
+        ]
+        
+    },
+    {   
+        "id": "feature_2_menu",
+        "size": {"width":2500, "height": 1686},
+        "selected": false,
+        "name": "feature_2_menu",
+        "chatBarText": "校務專區",
+        "areas": [
+            {
+                "bounds": {"x": 0, "y": 0, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 1"}
+            },
+            {
+                "bounds": {"x": 833, "y": 0, "width": 834, "height": 843},
+                "action": {"type": "message", "text": "Action 2"}
+            },
+            {
+                "bounds": {"x": 1667, "y": 0, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 3"}
+            },
+            {
+                "bounds": {"x": 0, "y": 843, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 4"}
+            },
+            {
+                "bounds": {"x": 833, "y": 843, "width": 834, "height": 843},
+                "action": {"type": "message", "text": "Action 5"}
+            },
+            {
+                "bounds": {"x": 1667, "y": 843, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 6"}
+            }
+        ]
+        
+    },
+    {
+        "id": "feature_2.1_menu",
+        "size": {"width":2500, "height": 1686},
+        "selected": false,
+        "name": "feature_2.1_menu",
+        "chatBarText": "校內電話",
+        "areas": [
+            {
+                "bounds": {"x": 0, "y": 0, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 1"}
+            },
+            {
+                "bounds": {"x": 833, "y": 0, "width": 834, "height": 843},
+                "action": {"type": "message", "text": "Action 2"}
+            },
+            {
+                "bounds": {"x": 1667, "y": 0, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 3"}
+            },
+            {
+                "bounds": {"x": 0, "y": 843, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 4"}
+            },
+            {
+                "bounds": {"x": 833, "y": 843, "width": 834, "height": 843},
+                "action": {"type": "message", "text": "Action 5"}
+            },
+            {
+                "bounds": {"x": 1667, "y": 843, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 6"}
+            }
+        ]
+        
+    },
+    {
+        "id": "feature_2.4_menu",
+        "size": {"width":2500, "height": 1686},
+        "selected": false,
+        "name": "feature_2.4_menu",
+        "chatBarText": "常用連結",
+        "areas": [
+            {
+                "bounds": {"x": 0, "y": 0, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 1"}
+            },
+            {
+                "bounds": {"x": 833, "y": 0, "width": 834, "height": 843},
+                "action": {"type": "message", "text": "Action 2"}
+            },
+            {
+                "bounds": {"x": 1667, "y": 0, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 3"}
+            },
+            {
+                "bounds": {"x": 0, "y": 843, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 4"}
+            },
+            {
+                "bounds": {"x": 833, "y": 843, "width": 834, "height": 843},
+                "action": {"type": "message", "text": "Action 5"}
+            },
+            {
+                "bounds": {"x": 1667, "y": 843, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 6"}
+            }
+        ]
+        
+    },
+    {
+        "id": "feature_4_menu",
+        "size": {"width":2500, "height": 1686},
+        "selected": false,
+        "name": "feature_4_menu",
+        "chatBarText": "校園地圖",
+        "areas": [
+            {
+                "bounds": {"x": 0, "y": 0, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 1"}
+            },
+            {
+                "bounds": {"x": 833, "y": 0, "width": 834, "height": 843},
+                "action": {"type": "message", "text": "Action 2"}
+            },
+            {
+                "bounds": {"x": 1667, "y": 0, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 3"}
+            },
+            {
+                "bounds": {"x": 0, "y": 843, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 4"}
+            },
+            {
+                "bounds": {"x": 833, "y": 843, "width": 834, "height": 843},
+                "action": {"type": "message", "text": "Action 5"}
+            },
+            {
+                "bounds": {"x": 1667, "y": 843, "width": 833, "height": 843},
+                "action": {"type": "message", "text": "Action 6"}
+            }
+        ]
+        
+    }
+]
