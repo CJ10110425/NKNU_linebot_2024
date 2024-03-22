@@ -30,7 +30,8 @@
                 "bounds": {"x": 1667, "y": 843, "width": 833, "height": 843},
                 "action": {"type": "message", "text": "Action 6"}
             }
-        ]
+        ],
+        "img": "/Users/lipinze/code/NKNU_linebot_2024/plugins/plugin_2/src/img/home_view.png"
         
     },
     {   
@@ -64,7 +65,8 @@
                 "bounds": {"x": 1667, "y": 843, "width": 833, "height": 843},
                 "action": {"type": "message", "text": "Action 6"}
             }
-        ]
+        ],
+        "img": "/Users/lipinze/code/NKNU_linebot_2024/plugins/plugin_2/src/img/feature_1.png"
         
     },
     {   
@@ -98,7 +100,8 @@
                 "bounds": {"x": 1667, "y": 843, "width": 833, "height": 843},
                 "action": {"type": "message", "text": "Action 6"}
             }
-        ]
+        ],
+        "img": "/Users/lipinze/code/NKNU_linebot_2024/plugins/plugin_2/src/img/feature_2.png"
         
     },
     {
@@ -132,7 +135,8 @@
                 "bounds": {"x": 1667, "y": 843, "width": 833, "height": 843},
                 "action": {"type": "message", "text": "Action 6"}
             }
-        ]
+        ],
+        "img": "/Users/lipinze/code/NKNU_linebot_2024/plugins/plugin_2/src/img/feature_2.1.png"
         
     },
     {
@@ -166,7 +170,8 @@
                 "bounds": {"x": 1667, "y": 843, "width": 833, "height": 843},
                 "action": {"type": "message", "text": "Action 6"}
             }
-        ]
+        ],
+        "img": "/Users/lipinze/code/NKNU_linebot_2024/plugins/plugin_2/src/img/feature_2.4.png"
         
     },
     {
@@ -200,7 +205,8 @@
                 "bounds": {"x": 1667, "y": 843, "width": 833, "height": 843},
                 "action": {"type": "message", "text": "Action 6"}
             }
-        ]
+        ],
+        "img": "/Users/lipinze/code/NKNU_linebot_2024/plugins/plugin_2/src/img/feature_4.png"
         
     }
 ]
