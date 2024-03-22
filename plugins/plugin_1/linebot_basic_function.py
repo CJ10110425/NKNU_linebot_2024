@@ -15,7 +15,7 @@ class LineBotBasicFunction():
         self.event = event
         self.user_id = event.source.user_id
         self.message = event.message.text
-    
+
     def reply_message(self, message=str):
         self.line_bot_api.reply_message(
             self.event.reply_token,
