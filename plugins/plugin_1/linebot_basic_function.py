@@ -16,6 +16,12 @@ class LineBotBasicFunction():
         self.user_id = event.source.user_id
         self.message = event.message.text
 
+    def get_msg(self):
+        return self.message
+
+    def get_user_id(self):
+        return self.user_id
+
     def reply_message(self, message=str):
         self.line_bot_api.reply_message(
             self.event.reply_token,
@@ -30,3 +36,6 @@ class LineBotBasicFunction():
         else:
             self.line_bot_api.push_message(
                 self.user_id, TextSendMessage(text=message))
+
+    def link_rich_menu_to_user(self, rich_menu_id):
+        self.line_bot_api.link_rich_menu_to_user(self.user_id, rich_menu_id)
