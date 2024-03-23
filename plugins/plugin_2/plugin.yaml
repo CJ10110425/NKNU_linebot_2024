@@ -1,5 +1,5 @@
 name: 'plugin_2'
-creator: 'wax911'
+creator: 'Jerry Lee'
 runtime:
   main: 'main'
-description: 'Advanced sample-plugin plugin template'
+description: 'rich_menu that cloud be used by user'
