@@ -2,33 +2,33 @@
     {   
         "id": "home_view_menu",
         "size": {"width": 2500, "height": 1686},
-        "selected": false,
+        "selected": true,
         "name": "home_view",
         "chatBarText": "咻！",
         "areas": [
             {
                 "bounds": {"x": 0, "y": 0, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 1"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 校/公車時刻表"}
             },
             {
                 "bounds": {"x": 833, "y": 0, "width": 834, "height": 843},
-                "action": {"type": "message", "text": "Action 2"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 開關鈴鐺"}
             },
             {
                 "bounds": {"x": 1667, "y": 0, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 3"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 校內活動"}
             },
             {
                 "bounds": {"x": 0, "y": 843, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 4"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 校務專區"}
             },
             {
                 "bounds": {"x": 833, "y": 843, "width": 834, "height": 843},
-                "action": {"type": "message", "text": "Action 5"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 校園地圖"}
             },
             {
                 "bounds": {"x": 1667, "y": 843, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 6"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 小飛燕AI"}
             }
         ],
         "img": "/Users/lipinze/code/NKNU_linebot_2024/plugins/plugin_2/src/img/home_view.png"
@@ -43,27 +43,27 @@
         "areas": [
             {
                 "bounds": {"x": 0, "y": 0, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 1"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 燕巢公車"}
             },
             {
                 "bounds": {"x": 833, "y": 0, "width": 834, "height": 843},
-                "action": {"type": "message", "text": "Action 2"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 燕巢公車"}
             },
             {
                 "bounds": {"x": 1667, "y": 0, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 3"}
+                "action": {"type": "message","text": "ʕ •ᴥ•ʔ 和平->燕巢"}
             },
             {
                 "bounds": {"x": 0, "y": 843, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 4"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 即時通報"}
             },
             {
                 "bounds": {"x": 833, "y": 843, "width": 834, "height": 843},
-                "action": {"type": "message", "text": "Action 5"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 問題回饋"}
             },
             {
                 "bounds": {"x": 1667, "y": 843, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 6"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 回到主選單"}
             }
         ],
         "img": "/Users/lipinze/code/NKNU_linebot_2024/plugins/plugin_2/src/img/feature_1.png"
@@ -78,27 +78,27 @@
         "areas": [
             {
                 "bounds": {"x": 0, "y": 0, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 1"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 校內電話"}
             },
             {
                 "bounds": {"x": 833, "y": 0, "width": 834, "height": 843},
-                "action": {"type": "message", "text": "Action 2"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 最新消息"}
             },
             {
                 "bounds": {"x": 1667, "y": 0, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 3"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 校內信箱"}
             },
             {
                 "bounds": {"x": 0, "y": 843, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 4"}
+                "action": {"type": "uri", "uri": "https://c.nknu.edu.tw/aca/Page.aspx?PN=28&PClass=A2005&GI=2"}
             },
             {
                 "bounds": {"x": 833, "y": 843, "width": 834, "height": 843},
-                "action": {"type": "message", "text": "Action 5"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 常用連結"}
             },
             {
                 "bounds": {"x": 1667, "y": 843, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 6"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 回到主選單"}
             }
         ],
         "img": "/Users/lipinze/code/NKNU_linebot_2024/plugins/plugin_2/src/img/feature_2.png"
@@ -113,27 +113,27 @@
         "areas": [
             {
                 "bounds": {"x": 0, "y": 0, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 1"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 燕巢校務"}
             },
             {
                 "bounds": {"x": 833, "y": 0, "width": 834, "height": 843},
-                "action": {"type": "message", "text": "Action 2"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 燕巢宿舍"}
             },
             {
                 "bounds": {"x": 1667, "y": 0, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 3"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 問題回報"}
             },
             {
                 "bounds": {"x": 0, "y": 843, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 4"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 和平校務"}
             },
             {
                 "bounds": {"x": 833, "y": 843, "width": 834, "height": 843},
-                "action": {"type": "message", "text": "Action 5"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 和平宿舍"}
             },
             {
                 "bounds": {"x": 1667, "y": 843, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 6"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 回到主選單"}
             }
         ],
         "img": "/Users/lipinze/code/NKNU_linebot_2024/plugins/plugin_2/src/img/feature_2.1.png"
@@ -148,27 +148,27 @@
         "areas": [
             {
                 "bounds": {"x": 0, "y": 0, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 1"}
+                "action": {"type": "uri", "uri": "https://sso.nknu.edu.tw/userLogin/login.aspx?cUrl=/default.aspx"}
             },
             {
                 "bounds": {"x": 833, "y": 0, "width": 834, "height": 843},
-                "action": {"type": "message", "text": "Action 2"}
+                "action": {"type": "uri", "uri": "https://w3.nknu.edu.tw/zh/"}
             },
             {
                 "bounds": {"x": 1667, "y": 0, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 3"}
+                "action": {"type": "uri", "uri": "https://www.facebook.com/nknu2015/?locale=zh_TW"}
             },
             {
                 "bounds": {"x": 0, "y": 843, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 4"}
+                "action": {"type": "uri", "uri": "https://www.dcard.tw/f/nknu"}
             },
             {
                 "bounds": {"x": 833, "y": 843, "width": 834, "height": 843},
-                "action": {"type": "message", "text": "Action 5"}
+                "action": {"type": "uri", "uri": "https://www.instagram.com/2015nknucc/"}
             },
             {
                 "bounds": {"x": 1667, "y": 843, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 6"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 回到主選單"}
             }
         ],
         "img": "/Users/lipinze/code/NKNU_linebot_2024/plugins/plugin_2/src/img/feature_2.4.png"
@@ -182,28 +182,24 @@
         "chatBarText": "校園地圖",
         "areas": [
             {
-                "bounds": {"x": 0, "y": 0, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 1"}
-            },
-            {
-                "bounds": {"x": 833, "y": 0, "width": 834, "height": 843},
-                "action": {"type": "message", "text": "Action 2"}
+                "bounds": {"x": 0, "y": 0, "width": 1667, "height": 843},
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 燕巢校區"}
             },
             {
                 "bounds": {"x": 1667, "y": 0, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 3"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 教室查詢"}
             },
             {
                 "bounds": {"x": 0, "y": 843, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 4"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 地圖問題回報"}
             },
             {
                 "bounds": {"x": 833, "y": 843, "width": 834, "height": 843},
-                "action": {"type": "message", "text": "Action 5"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 隨機位置"}
             },
             {
                 "bounds": {"x": 1667, "y": 843, "width": 833, "height": 843},
-                "action": {"type": "message", "text": "Action 6"}
+                "action": {"type": "message", "text": "ʕ •ᴥ•ʔ 回到主選單"}
             }
         ],
         "img": "/Users/lipinze/code/NKNU_linebot_2024/plugins/plugin_2/src/img/feature_4.png"
