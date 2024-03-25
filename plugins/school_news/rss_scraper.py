@@ -39,13 +39,11 @@ class RssScraper:
             return category_data
     
 if __name__ == "__main__":
-    # 創建 RSSScraper 實例並執行爬蟲功能
     
     scraper = RssScraper()
     scraper.fetch_and_convert_to_json()
 
-    # 根據分類讀取 JSON 資料內容
-    category = "行政資訊"  # 這裡輸入你想查詢的分類
+    category = "行政資訊"  
     category_data = scraper.read_json_by_category(category)
     for i in category_data[:1]:
         # 使用 BeautifulSoup 解析 HTML
@@ -56,6 +54,5 @@ if __name__ == "__main__":
         print(description_text)
     # soup = BeautifulSoup(category_data["description"], 'html.parser')
 
-    # # 提取純文字內容
     # description_text = soup.get_text(separator="\n", strip=True)
     # print(description_text)
