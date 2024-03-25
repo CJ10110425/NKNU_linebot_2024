@@ -48,10 +48,10 @@ class PluginUtility:
         register_plugins = {}
         if plugin_name not in [None, []]:
             logger.info(f"Registering {plugin_name} ")
+            logger.info("*" * 10 )
             for plugin in plugin_name:
                 if PluginUtility.compare_plugin_name(plugin):
-                    logger.info(f"Plugin_config {
-                                plugin} registered successfully")
+                    logger.info(f"Plugin_config {plugin} -> registered successfully")
                     register_plugins[plugin] = PluginUtility.setup_plugin_config(
                         plugin)
                 else:

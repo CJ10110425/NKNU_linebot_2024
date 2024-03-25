@@ -9,7 +9,5 @@ logging:
   level: 'DEBUG'
 plugins:
   # Packages to download from registry
-  - plugin_1
-  - plugin_2
-  - plugin_3
-  - plugin_4
+  - linebot_basic_function
+  - rich_menu

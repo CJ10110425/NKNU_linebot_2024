@@ -1,4 +1,4 @@
-name: plugin_1
+name: linebot_basic_function
 creator: Jerry Lee
 runtime:
   main: main

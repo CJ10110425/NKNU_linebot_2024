@@ -1,4 +1,4 @@
-name: 'plugin_2'
+name: 'rich_menu'
 creator: 'Jerry Lee'
 runtime:
   main: 'main'

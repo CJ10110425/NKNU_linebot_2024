@@ -23,7 +23,6 @@ class PluginEngine():
     def register_plugins():
         logger.info("Starting Registeration")
         logger.info("-" * 10)
-        logger.info("-" * 10)
         logger.info("Registeration is finished")
         logger.info("=" * 10)
         return PluginUtility.register_plugin()
