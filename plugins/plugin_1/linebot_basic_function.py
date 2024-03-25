@@ -33,7 +33,7 @@ class LineBotBasicFunction():
     def reply_message(self, message=str):
         self.line_bot_api.reply_message(
             self.event.reply_token,
-            TextSendMessage(text = message)
+            TextSendMessage(text=message)
         )
 
     def reply_image_message(self, image_url=str):
@@ -41,8 +41,8 @@ class LineBotBasicFunction():
         self.line_bot_api.reply_message(
             self.event.reply_token,
             ImageSendMessage(
-                original_content_url = image_url,
-                preview_image_url = image_dict["loading_image"]
+                original_content_url=image_url,
+                preview_image_url=image_dict["loading_image"]
             )
         )
 
