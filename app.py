@@ -27,6 +27,8 @@ line_bot_api = LineBotApi(line_bot_info["LINE_BOT_CHANNEL_ACCESS_TOKEN"])
 handler = WebhookHandler(line_bot_info["LINE_BOT_CHANNEL_SECRET"])
 
 # Webhook 接收來自 Line 平台的訊息
+
+
 @app.route("/callback", methods=['POST'])
 def callback():
     signature = request.headers['X-Line-Signature']
@@ -43,11 +45,14 @@ def callback():
 
     return 'OK'
 
-# 處理訊息
+
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    pulgin = PluginEngine(line_bot_api, event)
+    pulgin = PluginEngine(line_bot_api, event, register_plugins)
     pulgin.run()
 
+
 if __name__ == "__main__":
+    # 回傳成功註冊的 plugins
+    register_plugins = PluginEngine.register_plugins()
     app.run(host='0.0.0.0', port=8080)
