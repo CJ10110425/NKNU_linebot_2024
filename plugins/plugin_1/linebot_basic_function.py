@@ -3,9 +3,10 @@
 # 1. 回覆使用者訊息
 # 2. 主動推播訊息
 
-
+import json
 from linebot.models import (
-    TextSendMessage
+    TextSendMessage,
+    ImageSendMessage
 )
 
 
@@ -16,6 +17,13 @@ class LineBotBasicFunction():
         self.user_id = event.source.user_id
         self.message = event.message.text
 
+    # 讀取 image.json的內容回傳一個 dict
+    def __read_image_json(self) -> dict:
+        with open("plugins/plugin_1/src/image.json", "r", encoding="utf-8") as image_file:
+            image_json = image_file.read()
+            image_dict = json.loads(image_json)
+        return image_dict
+
     def get_msg(self):
         return self.message
 
@@ -25,7 +33,17 @@ class LineBotBasicFunction():
     def reply_message(self, message=str):
         self.line_bot_api.reply_message(
             self.event.reply_token,
-            TextSendMessage(text=message)
+            TextSendMessage(text = message)
+        )
+
+    def reply_image_message(self, image_url=str):
+        image_dict = self.__read_image_json()
+        self.line_bot_api.reply_message(
+            self.event.reply_token,
+            ImageSendMessage(
+                original_content_url = image_url,
+                preview_image_url = image_dict["loading_image"]
+            )
         )
 
     # 使用者可以輸入 user_id 來推播訊息或是直接使用預設的 self_user_id 推播訊息
@@ -38,4 +56,7 @@ class LineBotBasicFunction():
                 self.user_id, TextSendMessage(text=message))
 
     def link_rich_menu_to_user(self, rich_menu_id):
+        '''
+            輸入 rich_menu_id 來連結 rich_menu_id 到 user_id 上
+        '''
         self.line_bot_api.link_rich_menu_to_user(self.user_id, rich_menu_id)
