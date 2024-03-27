@@ -1,0 +1,7 @@
+name: linebot_basic_function
+creator: Jerry Lee
+runtime:
+  main: main
+description: Basic linebot functionality that every plugin can use
+how to use :
+  - from  plugins.plugin_1 import LineBotBasicFunction

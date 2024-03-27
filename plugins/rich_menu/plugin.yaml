@@ -1,0 +1,5 @@
+name: 'rich_menu'
+creator: 'Jerry Lee'
+runtime:
+  main: 'main'
+description: 'rich_menu that cloud be used by user'
