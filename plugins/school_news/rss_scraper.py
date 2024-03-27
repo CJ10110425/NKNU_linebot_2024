@@ -1,12 +1,12 @@
 import requests
 import xml.etree.ElementTree as ET
 import json
-from bs4 import BeautifulSoup
+import os
 
 class RssScraper:
     def __init__(self, url = "https://news.nknu.edu.tw/nknu_News/RSS.ashx"):
         self.url = url
-        self.json_filename = "school_news_info.json"
+        self.json_filename = os.path.dirname(__file__)+"/src/school_news_info.json"
     
     def fetch_and_convert_to_json(self):
         response = requests.get(self.url)
@@ -43,15 +43,15 @@ if __name__ == "__main__":
     scraper = RssScraper()
     scraper.fetch_and_convert_to_json()
 
-    category = "行政資訊"  
-    category_data = scraper.read_json_by_category(category)
-    for i in category_data[:1]:
-        # 使用 BeautifulSoup 解析 HTML
-        soup = BeautifulSoup(i["description"], 'html.parser')
+    # category = "行政資訊"  
+    # category_data = scraper.read_json_by_category(category)
+    # for i in category_data[:1]:
+    #     # 使用 BeautifulSoup 解析 HTML
+    #     soup = BeautifulSoup(i["description"], 'html.parser')
 
-        # 提取純文字內容
-        description_text = soup.get_text(separator="\n", strip=True)
-        print(description_text)
+    #     # 提取純文字內容
+    #     description_text = soup.get_text(separator="\n", strip=True)
+    #     print(description_text)
     # soup = BeautifulSoup(category_data["description"], 'html.parser')
 
     # description_text = soup.get_text(separator="\n", strip=True)
