@@ -1,0 +1,5 @@
+name: 'traffic_schedule'
+creator: 'Shirayuki_Rin'
+runtime:
+  main: 'main'
+description: 'Query traffic schedules for you'

@@ -4,9 +4,11 @@
 # 2. 主動推播訊息
 
 import json
+
 from linebot.models import (
     TextSendMessage,
-    ImageSendMessage
+    ImageSendMessage,
+    QuickReply, FlexSendMessage, FlexContainer
 )
 
 
@@ -43,6 +45,28 @@ class LineBotBasicFunction():
             ImageSendMessage(
                 original_content_url=image_url,
                 preview_image_url=image_dict["loading_image"]
+            )
+        )
+
+    def reply_quick_actions(self, text: str = "", items: list = None):
+        if items is None:
+            raise Exception("No items provided")
+        self.line_bot_api.reply_message(
+            self.event.reply_token,
+            TextSendMessage(
+                text=text,
+                quick_reply=QuickReply(
+                    items=items
+                )
+            )
+        )
+
+    def reply_flex_message(self):
+        self.line_bot_api.reply_message(
+            self.event.reply_token,
+            FlexSendMessage(
+                alt_text="This is alt",
+                contents=FlexContainer()
             )
         )
 
