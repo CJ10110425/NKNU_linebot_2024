@@ -43,8 +43,8 @@ class SchoolBus:
             })
 
     def __get_current_time(self):
-        # return int(time.strftime("%H", time.localtime())), int(time.strftime("%M", time.localtime()))
-        return 14, 6
+        return int(time.strftime("%H", time.localtime())), int(time.strftime("%M", time.localtime()))
+        # return 14, 6
 
     def get_next_school_bus_schedule_yanchao_2_heping(self):
         current_time_hour, current_time_min = self.__get_current_time()
