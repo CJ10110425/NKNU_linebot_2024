@@ -24,16 +24,19 @@ class Plugin(PluginContract):
                     QuickReplyButton(
                         action=MessageAction(label="全部班次", text="ʕ •ᴥ•ʔ 和平->燕巢 校車查詢 全部班次"))
                 ])
+                return
             case "ʕ •ᴥ•ʔ 和平->燕巢 校車查詢 最近的班次":
                 nearest_school_bus = self.SchoolBus.get_next_school_bus_schedule_heping_2_yanchao()
                 # TODO flex message reply
                 if nearest_school_bus is None:
                     nearest_school_bus = "已經沒車了"
-                linebot_basic_function.reply_message(nearest_school_bus)
+                linebot_basic_function.reply_message(str(nearest_school_bus))
+                return
             case "ʕ •ᴥ•ʔ 和平->燕巢 校車查詢 全部班次":
                 all_bus = self.SchoolBus.get_all_school_bus_schedule_heping_2_yanchao()
                 # TODO flex message reply
                 linebot_basic_function.reply_message(str(all_bus))
+                return
             case "ʕ •ᴥ•ʔ 燕巢->和平":
                 # TODO show quick actions button to let use choose display next bus or all bus schedule
                 linebot_basic_function.reply_quick_actions("ʕ •ᴥ•ʔ 燕巢->和平 請到手機上使用", [
@@ -41,13 +44,20 @@ class Plugin(PluginContract):
                         action=MessageAction(label="最近的班次", text="ʕ •ᴥ•ʔ 燕巢->和平 校車查詢 最近的班次")),
                     QuickReplyButton(
                         action=MessageAction(label="全部班次", text="ʕ •ᴥ•ʔ 燕巢->和平 校車查詢 全部班次"))])
+                return
             case "ʕ •ᴥ•ʔ 燕巢->和平 校車查詢 最近的班次":
                 nearest_school_bus = self.SchoolBus.get_next_school_bus_schedule_yanchao_2_heping()
                 # TODO flex message reply
                 if nearest_school_bus is None:
                     nearest_school_bus = "已經沒車了"
-                linebot_basic_function.reply_message(nearest_school_bus)
+                linebot_basic_function.reply_message(str(nearest_school_bus))
+                return
             case "ʕ •ᴥ•ʔ 燕巢->和平 校車查詢 全部班次":
                 all_bus = self.SchoolBus.get_all_school_bus_schedule_yanchao_2_heping()
                 # TODO flex message reply
                 linebot_basic_function.reply_message(str(all_bus))
+                return
+
+            case "ʕ •ᴥ•ʔ 燕巢公車":
+                # TODO bus
+                pass
