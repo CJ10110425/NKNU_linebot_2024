@@ -11,3 +11,4 @@ plugins:
   # Packages to download from registry
   - linebot_basic_function
   - rich_menu
+  - flex_msg
