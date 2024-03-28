@@ -7,6 +7,7 @@ import logging
 from datetime import datetime
 import json
 from plugins.flex_msg import create_flex_msg
+from .rss_scraper import RssScraper
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 logger = logging.getLogger(__name__)
 
@@ -46,6 +47,7 @@ class Plugin(PluginContract):
         linebot = LineBotBasicFunction(self.line_bot_api, self.event)
         if linebot.get_msg() == "ʕ •ᴥ•ʔ 最新消息":
             news_data = self.__get_school_news()
+            updated_school_news = RssScraper()
             msg = create_flex_msg(*news_data.values())
             linebot.reply_flex_msg(msg)
 

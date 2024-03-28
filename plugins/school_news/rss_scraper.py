@@ -10,6 +10,11 @@ class RssScraper:
         self.url = url
         self.json_filename = os.path.dirname(__file__) + "/src/school_news_info.json"
         self.last_updated_file = os.path.dirname(__file__) + "/src/last_updated.json"
+        current_time = datetime.now()
+        if self.should_update_rss(current_time):
+            self.fetch_and_convert_to_json()
+        else:
+            print("RSS data 不需要更新") # FIXME:改成logging
 
     def fetch_and_convert_to_json(self):
         response = requests.get(self.url)
@@ -61,7 +66,7 @@ class RssScraper:
             cleaned_description = cleaned_description.replace('\n', '')  # Remove newline characters
             cleaned_description = ' '.join(cleaned_description.split())  # Remove extra whitespace between words
             return cleaned_description
-        return ""
+        return "如需更多資訊請點擊以下按鈕"
 
     def is_chinese(self, text):
         for char in text:
@@ -75,9 +80,6 @@ class RssScraper:
         return cleantext
 
 if __name__ == "__main__":
-    current_time = datetime.now()
+    
     scraper = RssScraper()
-    if scraper.should_update_rss(current_time):
-        scraper.fetch_and_convert_to_json()
-    else:
-        print("RSS data 不需要更新")
+    

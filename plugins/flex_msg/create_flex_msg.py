@@ -20,7 +20,8 @@ def create_flex_msg(template_count, titles, description, pub_dates, category, li
         json_template['body']['contents'][1]['text'] = category[i]
         json_template['body']['contents'][2]['text'] = pub_dates[i]
         json_template['body']['contents'][3]['text'] = description[i][:110]
-        json_template['body']['contents'][4]['action']['uri'] = link_urls[i]
+        json_template['body']['contents'][5]['contents'][0]['action']['uri'] = link_urls[i]
+
 
         if not templates:
             templates.append({

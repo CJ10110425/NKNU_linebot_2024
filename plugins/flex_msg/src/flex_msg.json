@@ -53,17 +53,26 @@
                 "text": "REPLACE_COURSE_INFO"
             },
             {
-                "type": "button",
-                "style": "primary",
-                "action": {
-                    "type": "uri",
-                    "label": "查看更多",
-                    "uri": "REPLACE_URI"
-                },
-                "margin": "xxl",
-                "color": "#FF69B4"
+                "type": "filler"  
+            },
+            {
+                "type": "box",
+                "layout": "vertical",
+                "margin": "lg", 
+                "spacing": "sm",
+                "contents": [
+                    {
+                        "type": "button",
+                        "style": "primary",
+                        "action": {
+                            "type": "uri",
+                            "label": "查看更多",
+                            "uri": "REPLACE_URI"
+                        },
+                        "color": "#FF69B4"
+                    }
+                ]
             }
         ]
     }
-
 }
