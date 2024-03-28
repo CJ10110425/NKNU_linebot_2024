@@ -75,8 +75,23 @@ class LineBotBasicFunction():
             )
         )
 
-        # 使用者可以輸入 user_id 來推播訊息或是直接使用預設的 self_user_id 推播訊息
+    def push_flex_message(self, alt_text, contents, user_id=None):
+        if user_id:
+            self.line_bot_api.push_message(
+                user_id, FlexSendMessage(
+                    alt_text=alt_text,
+                    contents=contents
+                )
+            )
+        else:
+            self.line_bot_api.push_message(
+                self.user_id, FlexSendMessage(
+                    alt_text=alt_text,
+                    contents=contents
+                )
+            )
 
+    # 使用者可以輸入 user_id 來推播訊息或是直接使用預設的 self_user_id 推播訊息
     def push_message(self, message=str, user_id=None):
         if user_id:
             self.line_bot_api.push_message(
