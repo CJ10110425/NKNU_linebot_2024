@@ -2,7 +2,7 @@ import os
 import json
 from linebot.models import FlexSendMessage
 
-def create_flex_msg(template_count, titles, admin_infos, pub_dates, course_infos, link_urls, image_urls=None):
+def create_flex_msg(template_count, titles, description, pub_dates, category, link_urls, image_urls=None):
     if image_urls is None:
         image_urls = [
             "https://cdn.discordapp.com/attachments/1222446430258466877/1222446656893616249/image.png?ex=66163f2a&is=6603ca2a&hm=af3159e8df7baf893c3bb2329ef1bce1b21360bd98e78a5f962e223b460fa9d1&",
@@ -17,9 +17,9 @@ def create_flex_msg(template_count, titles, admin_infos, pub_dates, course_infos
 
         json_template['hero']['url'] = image_urls[i % len(image_urls)]
         json_template['body']['contents'][0]['text'] = titles[i][:16]
-        json_template['body']['contents'][1]['text'] = admin_infos[i][:110]
+        json_template['body']['contents'][1]['text'] = category[i]
         json_template['body']['contents'][2]['text'] = pub_dates[i]
-        json_template['body']['contents'][3]['text'] = course_infos[i]
+        json_template['body']['contents'][3]['text'] = description[i][:110]
         json_template['body']['contents'][4]['action']['uri'] = link_urls[i]
 
         if not templates:
