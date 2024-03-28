@@ -1,0 +1,69 @@
+{
+    "type": "bubble",
+    "hero": {
+        "type": "image",
+        "size": "full",
+        "aspectRatio": "20:13",
+        "aspectMode": "cover",
+        "url": "REPLACE_URL"
+    },
+    "body": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "sm",
+        "contents": [
+            {
+                "type": "text",
+                "text": "REPLACE_TITLE",
+                "weight": "bold",
+                "size": "md",
+                "wrap": true,
+                "color": "#FF1493",
+                "style": "normal",
+                "align": "center"
+            },
+            {
+                "type": "text",
+                "text": "REPLACE_ADMIN_INFO",
+                "weight": "bold",
+                "size": "xs",
+                "wrap": true,
+                "color": "#FF99CC",
+                "align": "center",
+                "margin": "sm"
+            },
+            {
+                "type": "text",
+                "text": "REPLACE_PUB_DATE",
+                "weight": "bold",
+                "size": "xs",
+                "wrap": true,
+                "gravity": "center",
+                "color": "#666666",
+                "margin": "lg"
+            },
+            {
+                "type": "text",
+                "weight": "regular",
+                "size": "xxs",
+                "wrap": true,
+                "gravity": "center",
+                "color": "#CCCCCC",
+                "margin": "sm",
+                "text": "REPLACE_COURSE_INFO"
+            },
+            {
+                "type": "button",
+                "style": "primary",
+                "action": {
+                    "type": "uri",
+                    "label": "查看更多",
+                    "uri": "REPLACE_URI"
+                },
+                "margin": "xxl",
+                "color": "#FF69B4"
+            }
+        ]
+    }
+
+}

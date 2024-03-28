@@ -1,0 +1,7 @@
+name: flex_msg
+creator: Jerry Lee
+runtime:
+  main: main
+description: flex_msg let every msg look more bt4
+how to use :
+  - from  plugins.plugin_1 import LineBotBasicFunction

@@ -12,3 +12,4 @@ plugins:
   - linebot_basic_function
   - rich_menu
   - school_news
+  - flex_msg
