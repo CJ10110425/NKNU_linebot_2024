@@ -28,6 +28,5 @@ def create_flex_msg(template_count, titles, admin_infos, pub_dates, course_infos
                 "contents": []
             })
         templates[0]['contents'].append(json_template)
-    print(templates[0])
     msg = FlexSendMessage(alt_text='ʕ •ᴥ•ʔ', contents=templates[0])
     return msg
