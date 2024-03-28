@@ -1,0 +1,5 @@
+name: 'school_news'
+creator: 'Jerry Lee'
+runtime:
+  main: 'main'
+description: 'school news that cloud be searched by user'
