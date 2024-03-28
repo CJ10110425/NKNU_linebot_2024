@@ -36,6 +36,12 @@ class LineBotBasicFunction():
             TextSendMessage(text=message)
         )
 
+    def reply_flex_msg(self, flex_msg):
+        self.line_bot_api.reply_message(
+            self.event.reply_token,
+            flex_msg
+        )
+
     def reply_image_message(self, image_url=str):
         image_dict = self.__read_image_json()
         self.line_bot_api.reply_message(
