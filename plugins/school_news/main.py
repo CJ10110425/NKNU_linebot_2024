@@ -6,7 +6,7 @@ import os
 import logging
 from datetime import datetime
 import json
-from plugins.flex_msg import 
+from plugins.flex_msg import create_flex_msg
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 logger = logging.getLogger(__name__)
 
@@ -28,25 +28,26 @@ class Plugin(PluginContract):
             "link": []
         }
         with open(os.path.dirname(__file__)+"/src/school_news_info.json") as news_info:
-            news_data = json.load(news_info)
+            news_json = json.load(news_info)
         # 從 school_news_info.json 找出最新的 13 個消息
-        sorted_news = sorted(news_data, key=lambda x: datetime.strptime(
+        sorted_news = sorted(news_json, key=lambda x: datetime.strptime(
             x['pubDate'], "%Y-%m-%d %H:%M:%S"), reverse=True)
-        for event in sorted_news[:13]:
+        for event in sorted_news[:12]:
             news_data['template_count'] += 1
             news_data['titles'].append(event['title'])
-            news_data['descriptions'].append(event['description'])
+            news_data['description'].append(event['description'])
             news_data['pub_dates'].append(event['pubDate'])
             news_data['category'].append(event['category'])
             news_data['link'].append(event['link'])
 
         return news_data
-    
 
     def run(self) -> None:
         linebot = LineBotBasicFunction(self.line_bot_api, self.event)
-        if linebot.get_msg == "ʕ •ᴥ•ʔ 最新消息":
-            pass
+        if linebot.get_msg() == "ʕ •ᴥ•ʔ 最新消息":
+            news_data = self.__get_school_news()
+            msg = create_flex_msg(*news_data.values())
+            linebot.reply_flex_msg(msg)
 
         script_dir = os.path.dirname(__file__)
         folder_name = os.path.basename(script_dir)
