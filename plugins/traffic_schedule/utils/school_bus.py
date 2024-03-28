@@ -10,8 +10,8 @@ class SchoolBus:
         self.YanChao2HePing = []
         self.__get_heping_to_yanchao_json()
         self.__get_yanchao_to_heping_json()
-        self.locations = json.loads(
-            open(os.path.abspath(os.path.dirname(__file__)) + '/locations.json', encoding="utf-8").read())
+        with open(os.path.abspath(os.path.dirname(__file__)) + '/locations.json', encoding="utf-8") as f:
+            self.locations = json.loads(f.read())
 
     def refresh_json(self):
         self.__get_heping_to_yanchao_json()
@@ -47,8 +47,9 @@ class SchoolBus:
         return int(time.strftime("%H", time.localtime())), int(time.strftime("%M", time.localtime()))
         # return 14, 6
 
-    def get_next_school_bus_schedule_yanchao_2_heping(self):
-        current_time_hour, current_time_min = self.__get_current_time()
+    def get_next_school_bus_schedule_yanchao_2_heping(self, current_time_hour=None, current_time_minute=None):
+        if current_time_hour is None or current_time_minute is None:
+            current_time_hour, current_time_min = self.__get_current_time()
         result = {
             "current_time": f"{current_time_hour}:{current_time_min}",
             "next_stop": None,
@@ -75,8 +76,9 @@ class SchoolBus:
     def get_all_school_bus_schedule_yanchao_2_heping(self):
         return self.YanChao2HePing
 
-    def get_next_school_bus_schedule_heping_2_yanchao(self):
-        current_time_hour, current_time_min = self.__get_current_time()
+    def get_next_school_bus_schedule_heping_2_yanchao(self, current_time_hour=None, current_time_min=None):
+        if current_time_hour is None or current_time_min is None:
+            current_time_hour, current_time_min = self.__get_current_time()
         result = {
             "current_time": f"{current_time_hour}:{current_time_min}",
             "next_stop": None,

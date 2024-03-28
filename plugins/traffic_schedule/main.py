@@ -1,3 +1,6 @@
+import json
+import os
+
 from linebot.models import QuickReplyButton, MessageAction
 
 from engine.engine_contract import PluginContract
@@ -9,6 +12,8 @@ class Plugin(PluginContract):
     def __init__(self, line_bot_api, event) -> None:
         super().__init__(line_bot_api, event)
         self.SchoolBus = SchoolBus()
+        with open(os.path.abspath(os.path.dirname(__file__)) + "/utils/flex_message.json", encoding="utf-8") as f:
+            self.flex_message_json = json.loads(f.read())
 
     def run(self) -> None:
 
@@ -18,9 +23,13 @@ class Plugin(PluginContract):
         match self.event.message.text:
             case "ʕ •ᴥ•ʔ 和平->燕巢":
                 # TODO show quick actions button to let use choose display next bus or all bus schedule
+                # TODO 讓使用者選擇特定時間的最近班次
                 linebot_basic_function.reply_quick_actions("ʕ •ᴥ•ʔ 和平->燕巢 請到手機上使用", [
                     QuickReplyButton(
                         action=MessageAction(label="最近的班次", text="ʕ •ᴥ•ʔ 和平->燕巢 校車查詢 最近的班次")),
+                    QuickReplyButton(
+                        action=MessageAction(label="特定時間最近的班次",
+                                             text="ʕ •ᴥ•ʔ 和平->燕巢 校車查詢 特定時間最近的班次")),
                     QuickReplyButton(
                         action=MessageAction(label="全部班次", text="ʕ •ᴥ•ʔ 和平->燕巢 校車查詢 全部班次"))
                 ])
@@ -32,6 +41,10 @@ class Plugin(PluginContract):
                     nearest_school_bus = "已經沒車了"
                 linebot_basic_function.reply_message(str(nearest_school_bus))
                 return
+            case "ʕ •ᴥ•ʔ 和平->燕巢 校車查詢 特定時間最近的班次":
+                linebot_basic_function.reply_flex_message("Time Picker",
+                                                          self.flex_message_json['next_school_bus_time_picker'])
+                pass
             case "ʕ •ᴥ•ʔ 和平->燕巢 校車查詢 全部班次":
                 all_bus = self.SchoolBus.get_all_school_bus_schedule_heping_2_yanchao()
                 # TODO flex message reply
@@ -39,9 +52,13 @@ class Plugin(PluginContract):
                 return
             case "ʕ •ᴥ•ʔ 燕巢->和平":
                 # TODO show quick actions button to let use choose display next bus or all bus schedule
+                # TODO 讓使用者選擇特定時間的最近班次
                 linebot_basic_function.reply_quick_actions("ʕ •ᴥ•ʔ 燕巢->和平 請到手機上使用", [
                     QuickReplyButton(
                         action=MessageAction(label="最近的班次", text="ʕ •ᴥ•ʔ 燕巢->和平 校車查詢 最近的班次")),
+                    QuickReplyButton(
+                        action=MessageAction(label="特定時間最近的班次",
+                                             text="ʕ •ᴥ•ʔ 燕巢->和平 校車查詢 特定時間最近的班次")),
                     QuickReplyButton(
                         action=MessageAction(label="全部班次", text="ʕ •ᴥ•ʔ 燕巢->和平 校車查詢 全部班次"))])
                 return
@@ -58,6 +75,12 @@ class Plugin(PluginContract):
                 linebot_basic_function.reply_message(str(all_bus))
                 return
 
-            case "ʕ •ᴥ•ʔ 燕巢公車":
+            case "a":
                 # TODO bus
-                pass
+                # linebot_basic_function.reply_quick_actions("ʕ •ᴥ•ʔ 燕巢公車 請到手機上使用", [
+                #     QuickReplyButton(
+                #         action=MessageAction(label="最近的班次", text="ʕ •ᴥ•ʔ 和平->燕巢 校車查詢 最近的班次")),
+                #     QuickReplyButton(
+                #         action=MessageAction(label="全部班次", text="ʕ •ᴥ•ʔ 和平->燕巢 校車查詢 全部班次"))
+                # ])
+                return

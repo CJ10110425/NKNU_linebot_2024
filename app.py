@@ -1,30 +1,30 @@
+import warnings
 
-from engine import PluginEngine
 from flask import Flask, request, abort
 from linebot import (
     LineBotApi, WebhookHandler
 )
+from linebot import LineBotSdkDeprecatedIn30
 from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage
+    MessageEvent, TextMessage, PostbackEvent
 )
-import os
+
+from engine import PluginEngine
 from usecase import LinebotUtility
 
-import warnings
-from linebot import LineBotSdkDeprecatedIn30
 warnings.filterwarnings("ignore", category=LineBotSdkDeprecatedIn30)
 
 app = Flask(__name__)
-
 
 line_bot_info = LinebotUtility.setup_linebot()
 # Channel Access Token
 line_bot_api = LineBotApi(line_bot_info["LINE_BOT_CHANNEL_ACCESS_TOKEN"])
 # Channel Secret
 handler = WebhookHandler(line_bot_info["LINE_BOT_CHANNEL_SECRET"])
+
 
 # Webhook 接收來自 Line 平台的訊息
 
@@ -50,6 +50,13 @@ def callback():
 def handle_message(event):
     pulgin = PluginEngine(line_bot_api, event, register_plugins)
     pulgin.run()
+
+
+@handler.add(PostbackEvent)
+def handle_postback(event):
+    # TODO 做成plugin架構
+    print(event.postback.data)
+    print(event.postback.params)
 
 
 if __name__ == "__main__":

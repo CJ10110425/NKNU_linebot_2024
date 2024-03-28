@@ -8,7 +8,10 @@ import json
 from linebot.models import (
     TextSendMessage,
     ImageSendMessage,
-    QuickReply, FlexSendMessage, FlexContainer
+    QuickReply,
+    FlexSendMessage,
+    FlexContainer,
+    DatetimePickerAction
 )
 
 
@@ -61,16 +64,19 @@ class LineBotBasicFunction():
             )
         )
 
-    def reply_flex_message(self):
+    def reply_flex_message(self, alt_text: str = "", contents=None):
+        if contents is None:
+            raise Exception("No contents provided")
         self.line_bot_api.reply_message(
             self.event.reply_token,
             FlexSendMessage(
-                alt_text="This is alt",
-                contents=FlexContainer()
+                alt_text=alt_text,
+                contents=contents
             )
         )
 
-    # 使用者可以輸入 user_id 來推播訊息或是直接使用預設的 self_user_id 推播訊息
+        # 使用者可以輸入 user_id 來推播訊息或是直接使用預設的 self_user_id 推播訊息
+
     def push_message(self, message=str, user_id=None):
         if user_id:
             self.line_bot_api.push_message(

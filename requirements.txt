@@ -1,4 +1,4 @@
+Flask
 line-bot-sdk
-flask
-PyYAML
-requests
+python-dotenv
+openpyxl

@@ -1,0 +1,20 @@
+{
+  "next_school_bus_time_picker": {
+    "type": "bubble",
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "button",
+          "action": {
+            "type": "datetimepicker",
+            "label": "請選擇時間",
+            "data": "SchoolBusTimePicker_H2Y",
+            "mode": "time"
+          }
+        }
+      ]
+    }
+  }
+}
