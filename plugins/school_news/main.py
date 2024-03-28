@@ -47,9 +47,9 @@ class Plugin(PluginContract):
         linebot = LineBotBasicFunction(self.line_bot_api, self.event)
         if linebot.get_msg() == "ʕ •ᴥ•ʔ 最新消息":
             news_data = self.__get_school_news()
-            updated_school_news = RssScraper()
             msg = create_flex_msg(*news_data.values())
             linebot.reply_flex_msg(msg)
+            updated_school_news = RssScraper()
 
         script_dir = os.path.dirname(__file__)
         folder_name = os.path.basename(script_dir)

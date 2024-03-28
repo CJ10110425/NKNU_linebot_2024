@@ -58,7 +58,7 @@ class RssScraper:
 
     def should_update_rss(self, current_time):
         last_updated = self.get_last_updated_time()
-        return (current_time - last_updated) > timedelta(hours=3)
+        return (current_time - last_updated) > timedelta(hours=1)
 
     def extract_chinese_descriptions(self, description):
         if self.is_chinese(description):
